@@ -1,0 +1,21 @@
+.timer-question-container {
+  width: 300px;
+  height: 35px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 50px;
+  overflow: hidden;
+
+  .timer-question {
+    height: 100%;
+    background-color: black;
+    animation-name: timer-question;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes timer-question {
+  from { width: 100%; }
+  to { width: 0; }
+}

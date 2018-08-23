@@ -1,0 +1,40 @@
+@import '_loader';
+@import '_timer_question';
+@import '_app';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+
+  ul {
+    list-style: none;
+  }
+
+  header {
+    height: 10vh;
+    text-align: center;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  #root {
+    height: 80vh;
+
+    .app {
+      position: relative;
+      height: 100%;
+    }
+  }
+
+  footer {
+    height: 10vh;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.loader-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); }
+  .loader-container div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%); }
+
+.timer-question-container {
+  width: 300px;
+  height: 35px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 50px;
+  overflow: hidden; }
+  .timer-question-container .timer-question {
+    height: 100%;
+    background-color: black;
+    animation-name: timer-question;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards; }
+
+@keyframes timer-question {
+  from {
+    width: 100%; }
+  to {
+    width: 0; } }
+
+.app {
+  text-align: center; }
+  .app .app-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white; }
+    .app .app-header .app-logo {
+      animation: app-logo-spin infinite 20s linear;
+      height: 80px; }
+    .app .app-header .app-title {
+      font-size: 1.5em; }
+  .app .app-intro {
+    font-size: large; }
+
+@keyframes app-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+  body ul {
+    list-style: none; }
+  body header {
+    height: 10vh;
+    text-align: center; }
+    body header h1 {
+      margin: 0; }
+  body #root {
+    height: 80vh; }
+    body #root .app {
+      position: relative;
+      height: 100%; }
+  body footer {
+    height: 10vh;
+    text-align: center; }
+    body footer p {
+      margin: 0; }
