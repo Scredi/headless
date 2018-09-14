@@ -3,32 +3,11 @@
     "title": "Questions quizz",
     "fields": [
         {
-            "key": "field_5b7d7e953c240",
-            "label": "timer g\u00e9n\u00e9ral",
-            "name": "timer_general",
-            "type": "number",
-            "instructions": "temps en secondes ex : 60",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": ""
-        },
-        {
             "key": "field_5b7d7ec23c241",
             "label": "timer question",
             "name": "timer_question",
             "type": "number",
-            "instructions": "temps en seconde ex: 60",
+            "instructions": "temps en secondes par question. ex: 60",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -170,5 +149,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1535011535
+    "modified": 1535036915
 }

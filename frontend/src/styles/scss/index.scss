@@ -1,5 +1,6 @@
+@import '../../../node_modules/rfs/scss/_rfs';
 @import '_loader';
-@import '_timer_question';
+@import '_timer';
 @import '_app';
 
 body {
@@ -11,12 +12,17 @@ body {
     list-style: none;
   }
 
+  h1 {
+    @include responsive-font-size(2rem);
+  }
+
   header {
     height: 10vh;
     text-align: center;
 
     h1 {
       margin: 0;
+      @include responsive-font-size(2.5rem);
     }
   }
 
@@ -26,6 +32,14 @@ body {
     .app {
       position: relative;
       height: 100%;
+
+      h4 {
+        @include responsive-font-size(1.6rem);
+      }
+
+      p {
+        @include responsive-font-size(1.4rem);
+      }
     }
   }
 
@@ -35,6 +49,7 @@ body {
 
     p {
       margin: 0;
+      @include responsive-font-size(1.2rem);
     }
   }
 }

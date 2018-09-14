@@ -79,6 +79,10 @@ add_action('rest_api_init', function() {
         'methods' => WP_REST_Server::READABLE,
         'callback' => 'get_questions'
     ));
+    register_rest_route('wp/v2', '/validation', array(
+        'methods' => WP_REST_Server::CREATABLE,
+        'callback' => 'validation'
+    ));
 });
 
 function get_questions() {
@@ -94,7 +98,6 @@ function get_questions() {
         ), 404);
     }
 
-    $timers['timer_general'] = get_field('timer_general', $postID);
     $timers['timer_question'] = get_field('timer_question', $postID);
 
     if(have_rows('questions', $postID)) {
@@ -118,3 +121,41 @@ function get_questions() {
         'timers' => $timers
     ), 200);
 }
+
+function validation($request) {
+    $datas = $request->get_param('datas');
+
+    if(empty($datas)) {
+        return new \WP_REST_Response(array(
+            'success' => false,
+            'result' => array()
+        ), 404);
+    }
+}
+
+function get_score() {
+
+}
+
+
+//CREATE QUIZZ RESULTS TABLE
+/*
+ * add_action('after_setup_theme', 'create_quizz_table');
+ * function create_quizz_table() {
+    global $wpdb;
+    $table_name = $wpdb->prefix.'natixis_quizz';
+
+    $sql = "CREATE TABLE IF NOT EXISTS `".$table_name."` (
+                `id` int(11) NOT NULL auto_increment,
+                `question_number` int(20) NOT NULL,
+                `question_answer` varchar(120) NOT NULL,
+                `country_language` varchar(120) NOT NULL,
+                `country_age_valid` int(20) NOT NULL,
+                `country_permission` varchar(120) NOT NULL,
+                `country_langue_code` varchar(120) NOT NULL,
+                PRIMARY KEY  (`id`)
+            );";
+    $wpdb->query($sql);
+
+
+}*/
